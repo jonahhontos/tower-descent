@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://471vw8mfwqvs"]
+
+[ext_resource type="Texture2D" uid="uid://lglj2mts3skj" path="res://tiled/extras/bonus bridge.png" id="1_7ct4w"]
+[ext_resource type="Script" uid="uid://5ycya8d10iba" path="res://scripts/terrain/bridge.gd" id="1_im2sa"]
+
+[node name="Bridge" type="StaticBody2D" unique_id=1146814046]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_im2sa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1453363044]
+texture = ExtResource("1_7ct4w")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1158660434]
+polygon = PackedVector2Array(-28, -12, -9, -24, 6, -24, 14, -21, 28, -14, 28, -9, 25, -7, 10, -15, 0, -18, -11, -16, -21, -9, -28, -8)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=834710763]
+polygon = PackedVector2Array(-29, 16, -29, 13, -12, 3, -1, 0, 13, 3, 29, 13, 29, 17, 17, 23, 6, 14, -5, 14, -14, 21, -17, 22)
+
+[node name="DisableWaterCollsion" type="Area2D" parent="." unique_id=872290324]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DisableWaterCollsion" unique_id=1739151089]
+position = Vector2(-441, -88)
+polygon = PackedVector2Array(408, 81, 416, 80, 436, 70, 446, 70, 464, 81, 472, 80, 472, 100, 467, 99, 446, 90, 434, 90, 412, 100, 408, 100)
+
+[connection signal="body_entered" from="DisableWaterCollsion" to="." method="_on_disable_water_collsion_body_entered"]
+[connection signal="body_exited" from="DisableWaterCollsion" to="." method="_on_disable_water_collsion_body_exited"]

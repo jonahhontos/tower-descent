@@ -1,0 +1,103 @@
+{
+    "activeFile": "sample map/summer forest, usage guide.tmx",
+    "expandedProjectPaths": [
+        ".",
+        "sample map"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/TSX files/summer 32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/TSX files/summer 48x32.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/TSX files/summer forest wang tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2.04
+        },
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/TSX files/summer forest.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1.9416
+        },
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/TSX files/summer trees 80x112.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/TSX files/summer water sparkles.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/TSX files/summer waterfall B.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/summer forest, usage guide.tmx": {
+            "scale": 2.04,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 423.52941176470586,
+                "y": 216.1764705882353
+            }
+        },
+        "sample map/TSX files/bonus bridge.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/TSX files/collision & alpha.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/TSX files/summer 16x32.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/TSX files/summer 32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/TSX files/summer 48x32.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/TSX files/summer forest wang tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/TSX files/summer forest.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/TSX files/summer trees 80x112.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/TSX files/summer water sparkles.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/TSX files/summer waterfall B.tsx": {
+            "scaleInDock": 1
+        },
+        "sample map/summer forest sample map.tmx": {
+            "scale": 0.890625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 256,
+                "y": 255.99999999999994
+            }
+        },
+        "sample map/summer forest, usage guide.tmx": {
+            "scale": 1.438,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 180.1112656467316,
+                "y": 180.80667593880392
+            }
+        }
+    },
+    "last.exportedFilePath": "/Users/jonahhontos/Documents/game dev/solo games/farming rogue/scenes",
+    "map.lastUsedExportFilter": "Godot 4 Scene files (*.tscn)",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "openFiles": [
+        "sample map/summer forest sample map.tmx",
+        "sample map/summer forest, usage guide.tmx"
+    ],
+    "project": "summer_tiles.tiled-project",
+    "recentFiles": [
+        "sample map/summer forest sample map.tmx",
+        "sample map/summer forest, usage guide.tmx",
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/summer forest, usage guide.tmx",
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/TSX files/summer forest wang tiles.tsx",
+        "/Users/jonahhontos/Documents/game dev/asset packs/mana seed/20.04c - Summer Forest 4.3/sample map/TSX files/summer forest.tsx"
+    ]
+}
