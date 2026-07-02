@@ -1,7 +1,13 @@
 extends State
 
-var walk_cutoff: float = 0.05
+var walk_cutoff: float = 0.1
 var run_cutoff: float = 0.5
+
+
+func update_physics(_delta: float) -> void:
+	character.direction = Input.get_vector("left","right","up","down")
+	
+
 
 func update() -> void:
 	super.update()
