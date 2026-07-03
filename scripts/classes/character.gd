@@ -7,6 +7,7 @@ var last_direction: Vector2
 var direction: Vector2
 var animation_player: AnimationPlayer
 var current_animation: String
+var previous_animation: String
 
 func _ready() -> void:
 	animation_player = get_node("AnimationPlayer")
@@ -19,7 +20,9 @@ func _physics_process(delta: float) -> void:
 	
 	
 func update_animation() -> void:
-	animation_player.play(current_animation)
+	if current_animation != previous_animation:
+		animation_player.play(current_animation)
+		previous_animation = current_animation
 
 
 func get_direction() -> String:

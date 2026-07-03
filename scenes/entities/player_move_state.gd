@@ -3,20 +3,33 @@ extends State
 var walk_cutoff: float = 0.1
 var run_cutoff: float = 0.5
 
+var player: Player
+
+func init() -> void:
+	super.init()
+	player = character
+
 
 func update_physics(_delta: float) -> void:
-	character.direction = Input.get_vector("left","right","up","down")
+	player.direction = Input.get_vector("left","right","up","down")
 	
+	if Input.is_action_just_pressed("tool1_action"):
+		parent_state_machine.switch_to("Use" + Global.ToolMap[player.tool_1_action])
 
 
 func update() -> void:
 	super.update()
-	character.current_animation = get_movement_type() + character.get_direction()
+	player.current_animation = get_movement_type() + player.get_direction()
 
 func get_movement_type() -> String:
-	if character.velocity.length() > character.speed * run_cutoff:
+	if player.velocity.length() > player.speed * run_cutoff:
 		return "run"
-	elif character.velocity.length() > character.speed * walk_cutoff:
+	elif player.velocity.length() > player.speed * walk_cutoff:
 		return "walk"
 	else:
 		return "idle"
+		
+
+func exit() -> void:
+	super.exit()
+	player.direction = Vector2.ZERO
