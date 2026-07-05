@@ -17,6 +17,8 @@ func enter() -> void:
 func exit() -> void:
 	super.exit()
 	state_active = false
+	combo_step = 0
+	next_step = 0
 
 
 func update_physics(_delta: float) -> void:
@@ -27,18 +29,21 @@ func update_physics(_delta: float) -> void:
 	
 	if can_act:
 		if next_step == combo_plus_one:
-			can_act = false
 			combo_step = next_step
 			play_next_animation()
 		elif Input.get_vector("left","right","up","down"):
+			print("movin'")
 			parent_state_machine.switch_to("Move")
 
 
 func play_next_animation() -> void:
 	character.current_animation = "sword_" + str(combo_step) + character.get_direction()
+	can_act = false
+	print("setting can act false")
 
 
 func enable_actions() -> void:
+	print("setting can act true")
 	can_act = true
 
 

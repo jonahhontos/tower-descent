@@ -11,6 +11,7 @@ func init() -> void:
 
 
 func update_physics(_delta: float) -> void:
+	super.update_physics(_delta)
 	player.direction = Input.get_vector("left","right","up","down")
 	
 	if Input.is_action_just_pressed("tool1_action"):

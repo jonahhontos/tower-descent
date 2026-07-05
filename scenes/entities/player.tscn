@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b5mxl6cw3g5ra" path="res://assets/sprites/anya.png" id="3_d4qa6"]
 [ext_resource type="Script" uid="uid://btdyrtsm7nsmd" path="res://scripts/entities/player_state_machine.gd" id="5_5u6hq"]
 [ext_resource type="Script" uid="uid://cygtveceq7kq1" path="res://scenes/entities/player_move_state.gd" id="6_d4qa6"]
-[ext_resource type="Script" uid="uid://b74nh4cb2pxyh" path="res://scenes/entities/use_sword.gd" id="7_ss7kx"]
+[ext_resource type="Script" uid="uid://b74nh4cb2pxyh" path="res://scenes/entities/use_sword_state.gd" id="7_ss7kx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_08t41"]
 radius = 3.0
@@ -306,7 +306,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.20023434, 0.39733073),
+"times": PackedFloat32Array(0.2046115, 0.39733073),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -352,7 +352,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.2005098, 0.39953196),
+"times": PackedFloat32Array(0.2025696, 0.39953196),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -398,7 +398,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.19965251, 0.39904028),
+"times": PackedFloat32Array(0.2032572, 0.39904028),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -444,7 +444,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.19899735, 0.39864987),
+"times": PackedFloat32Array(0.20311704, 0.39864987),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -490,7 +490,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.20023434, 0.39733073),
+"times": PackedFloat32Array(0.20744377, 0.39733073),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -536,7 +536,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.20023434, 0.39733073),
+"times": PackedFloat32Array(0.20203666, 0.39733073),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -582,7 +582,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.20023434, 0.39733073),
+"times": PackedFloat32Array(0.20074931, 0.39733073),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -628,7 +628,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.20023434, 0.39733073),
+"times": PackedFloat32Array(0.20538396, 0.39733073),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -711,7 +711,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [true]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
