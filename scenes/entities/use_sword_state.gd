@@ -39,11 +39,9 @@ func update_physics(_delta: float) -> void:
 func play_next_animation() -> void:
 	character.current_animation = "sword_" + str(combo_step) + character.get_direction()
 	can_act = false
-	print("setting can act false")
 
 
 func enable_actions() -> void:
-	print("setting can act true")
 	can_act = true
 
 
