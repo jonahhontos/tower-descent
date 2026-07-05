@@ -27,12 +27,19 @@ func update_physics(_delta: float) -> void:
 	
 	if can_act:
 		if next_step == combo_plus_one:
+			can_act = false
 			combo_step = next_step
 			play_next_animation()
+		elif Input.get_vector("left","right","up","down"):
+			parent_state_machine.switch_to("Move")
 
 
 func play_next_animation() -> void:
 	character.current_animation = "sword_" + str(combo_step) + character.get_direction()
+
+
+func enable_actions() -> void:
+	can_act = true
 
 
 func end_attack() -> void:

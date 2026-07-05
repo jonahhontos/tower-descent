@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://c5wkcu51ti0fo"]
 
 [ext_resource type="Script" uid="uid://d3jija5r55cug" path="res://scripts/entities/player.gd" id="1_08t41"]
-[ext_resource type="Texture2D" uid="uid://be23exfauqdpf" path="res://assets/sprites/anya_v3.png" id="1_ucweq"]
 [ext_resource type="Texture2D" uid="uid://mrk1hd2bpqec" path="res://assets/sprites/anya_shadow.png" id="2_1ie0h"]
-[ext_resource type="Texture2D" uid="uid://bo6g4gukcfqkq" path="res://assets/sprites/tool_use.png" id="4_ss7kx"]
+[ext_resource type="Texture2D" uid="uid://b5mxl6cw3g5ra" path="res://assets/sprites/anya.png" id="3_d4qa6"]
 [ext_resource type="Script" uid="uid://btdyrtsm7nsmd" path="res://scripts/entities/player_state_machine.gd" id="5_5u6hq"]
 [ext_resource type="Script" uid="uid://cygtveceq7kq1" path="res://scenes/entities/player_move_state.gd" id="6_d4qa6"]
 [ext_resource type="Script" uid="uid://b74nh4cb2pxyh" path="res://scenes/entities/use_sword.gd" id="7_ss7kx"]
@@ -37,54 +36,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ToolSprite:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ToolSprite:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ToolSprite:flip_h")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("ToolSprite:offset")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, -15)]
 }
 
 [sub_resource type="Animation" id="Animation_5u6hq"]
@@ -129,7 +80,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [32]
+"values": [12]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -157,7 +108,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [32]
+"values": [12]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -185,7 +136,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [16]
+"values": [6]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -215,7 +166,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [48, 49, 51, 48, 49, 51]
+"values": [36, 37, 38, 39, 40, 41]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -224,10 +175,10 @@ tracks/1/path = NodePath("BodySprite:flip_h")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.375),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false, true]
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_5ki56"]
@@ -242,10 +193,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.6252329),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [64, 65, 70, 67, 68, 71]
+"values": [48, 49, 50, 51, 52, 53]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -272,10 +223,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.6252329),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [64, 65, 70, 67, 68, 71]
+"values": [48, 49, 50, 51, 52, 53]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -302,10 +253,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
+"times": PackedFloat32Array(0, 0.125, 0.24976718, 0.375, 0.5, 0.625),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [52, 53, 55, 52, 53, 55]
+"values": [42, 43, 44, 45, 46, 47]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -314,15 +265,15 @@ tracks/1/path = NodePath("BodySprite:flip_h")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.375),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false, true]
+"values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_spk56"]
-resource_name = "sword_overhead_down"
-length = 0.6023667
+[sub_resource type="Animation" id="Animation_jv5ih"]
+resource_name = "sword_0_down"
+length = 0.4008246
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -331,63 +282,44 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.25434995),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.10023283, 0.15157273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [128, 129, 130]
+"values": [54, 55, 56, 57]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ToolSprite:frame")
+tracks/1/path = NodePath("BodySprite:flip_h")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.2556318, 0.31466243),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [false]
 }
-tracks/2/type = "value"
+tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ToolSprite:position:y")
+tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0.20023434, 0.39733073),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [-1.0, 0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("BodySprite:flip_h")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ToolSprite:flip_h")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
 }
 
-[sub_resource type="Animation" id="Animation_b4o2o"]
-resource_name = "sword_overhead_right"
-length = 0.6023667
+[sub_resource type="Animation" id="Animation_2ngu4"]
+resource_name = "sword_0_left"
+length = 0.40236855
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -396,51 +328,136 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.25434995),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15157273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [160, 161, 162]
+"values": [66, 67, 68, 69]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ToolSprite:frame")
+tracks/1/path = NodePath("BodySprite:flip_h")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.2556318, 0.31466243),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8, 9, 10, 11]
+"values": [true]
 }
-tracks/2/type = "value"
+tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ToolSprite:position:y")
+tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0.2005098, 0.39953196),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0.0, 0.0]
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ToolSprite:flip_h")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+
+[sub_resource type="Animation" id="Animation_n36er"]
+resource_name = "sword_0_right"
+length = 0.40203446
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15157273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [66, 67, 68, 69]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/UseSword")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.19965251, 0.39904028),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_d745t"]
+resource_name = "sword_0_up"
+length = 0.40180162
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.10023283, 0.15157273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [60, 61, 62, 63]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/UseSword")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.19899735, 0.39864987),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_1yk18"]
-resource_name = "sword_overhead_up"
-length = 0.6023667
+resource_name = "sword_1_down"
+length = 0.4008246
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -449,34 +466,269 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.25442606),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.10039042, 0.15157273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [144, 145, 146]
+"values": [72, 73, 74, 75]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ToolSprite:frame")
+tracks/1/path = NodePath("BodySprite:flip_h")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.2556, 0.31466243),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [4, 5, 6, 7]
+"values": [false]
 }
-tracks/2/type = "value"
+tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ToolSprite:position:y")
+tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2556),
+"times": PackedFloat32Array(0.20023434, 0.39733073),
 "transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_b4o2o"]
+resource_name = "sword_1_left"
+length = 0.4008246
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.10039042, 0.15157273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0.0, -1.0]
+"values": [84, 85, 86, 87]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/UseSword")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.20023434, 0.39733073),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_yr3on"]
+resource_name = "sword_1_right"
+length = 0.4008246
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.10039042, 0.15157273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [84, 85, 86, 87]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/UseSword")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.20023434, 0.39733073),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_qc1tv"]
+resource_name = "sword_1_up"
+length = 0.4008246
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.10039042, 0.15157273),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [78, 79, 80, 81]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/UseSword")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.20023434, 0.39733073),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_spk56"]
+resource_name = "sword_2_down"
+length = 0.7025932
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.25434995, 0.2996143),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [90, 91, 92, 93]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/UseSword")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5003006, 0.6964547),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_xe83n"]
+resource_name = "sword_2_up"
+length = 0.7025932
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.25434995, 0.2996143),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [96, 97, 98, 99]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/UseSword")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5003006, 0.6964547),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"enable_actions"
+}, {
+"args": [],
+"method": &"end_attack"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_dnykm"]
@@ -610,9 +862,16 @@ _data = {
 &"run_left": SubResource("Animation_5ki56"),
 &"run_right": SubResource("Animation_saib0"),
 &"run_up": SubResource("Animation_ogpgs"),
-&"sword_overhead_down": SubResource("Animation_spk56"),
-&"sword_overhead_right": SubResource("Animation_b4o2o"),
-&"sword_overhead_up": SubResource("Animation_1yk18"),
+&"sword_0_down": SubResource("Animation_jv5ih"),
+&"sword_0_left": SubResource("Animation_2ngu4"),
+&"sword_0_right": SubResource("Animation_n36er"),
+&"sword_0_up": SubResource("Animation_d745t"),
+&"sword_1_down": SubResource("Animation_1yk18"),
+&"sword_1_left": SubResource("Animation_b4o2o"),
+&"sword_1_right": SubResource("Animation_yr3on"),
+&"sword_1_up": SubResource("Animation_qc1tv"),
+&"sword_2_down": SubResource("Animation_spk56"),
+&"sword_2_up": SubResource("Animation_xe83n"),
 &"walk_down": SubResource("Animation_dnykm"),
 &"walk_left": SubResource("Animation_c5rqy"),
 &"walk_right": SubResource("Animation_b6tgf"),
@@ -629,10 +888,10 @@ script = ExtResource("1_08t41")
 texture = ExtResource("2_1ie0h")
 
 [node name="BodySprite" type="Sprite2D" parent="." unique_id=814670764]
-texture = ExtResource("1_ucweq")
+texture = ExtResource("3_d4qa6")
 offset = Vector2(0, -10)
-hframes = 16
-vframes = 16
+hframes = 6
+vframes = 18
 
 [node name="MoveCollision" type="CollisionShape2D" parent="." unique_id=1349553031]
 rotation = 1.5707964
@@ -644,13 +903,6 @@ zoom = Vector2(5, 5)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1396724705]
 libraries/ = SubResource("AnimationLibrary_c5rqy")
 autoplay = &"idle_down"
-
-[node name="ToolSprite" type="Sprite2D" parent="." unique_id=1500293413]
-visible = false
-texture = ExtResource("4_ss7kx")
-offset = Vector2(1, -15)
-hframes = 4
-vframes = 6
 
 [node name="StateMachine" type="Node" parent="." unique_id=800536265]
 script = ExtResource("5_5u6hq")

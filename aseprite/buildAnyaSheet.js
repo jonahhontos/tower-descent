@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 const fs = require('fs');
 
-fs.readFile('tool_anim_names.txt', 'utf8', (err, data) => {
+fs.readFile('anya_anim_names.txt', 'utf8', (err, data) => {
     if (err) {
         console.error('Error reading file:', err);
         return;
@@ -13,7 +13,7 @@ fs.readFile('tool_anim_names.txt', 'utf8', (err, data) => {
         filesString += ` anya/${anim}_down.aseprite anya/${anim}_up.aseprite anya/${anim}_side.aseprite`
     }
 
-    let commandString = `/Applications/Aseprite.app/Contents/MacOS/aseprite -b ${filesString} --sheet ../assets/sprites/tool_use.png`;
+    let commandString = `/Applications/Aseprite.app/Contents/MacOS/aseprite -b ${filesString} --sheet ../assets/sprites/anya.png`;
     console.log(commandString)
 
     exec(commandString, (error, stdout, stderr) => {

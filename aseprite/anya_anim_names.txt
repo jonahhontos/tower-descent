@@ -1,0 +1,6 @@
+idle
+walk
+run
+sword_0
+sword_1
+sword_overhead
