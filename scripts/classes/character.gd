@@ -1,8 +1,8 @@
 extends CharacterBody2D
 class_name Character
 
-var speed: float
-var acceleration: float
+@export var speed: float
+@export var acceleration: float
 var last_direction: Vector2
 var direction: Vector2
 var animation_player: AnimationPlayer

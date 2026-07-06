@@ -977,6 +977,8 @@ y_sort_enabled = true
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_08t41")
+speed = 225.0
+acceleration = 15.0
 
 [node name="ShadowSprite" type="Sprite2D" parent="." unique_id=1984403188]
 texture = ExtResource("2_1ie0h")
