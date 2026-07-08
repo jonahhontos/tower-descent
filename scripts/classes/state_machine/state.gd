@@ -10,7 +10,7 @@ func init() -> void:
 	parent_state_machine = get_parent()
 
 
-func update() -> void:
+func update(_delta: float) -> void:
 	character.update_animation()
 	
 

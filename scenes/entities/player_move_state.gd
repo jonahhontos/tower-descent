@@ -18,8 +18,8 @@ func update_physics(_delta: float) -> void:
 		parent_state_machine.switch_to("Use" + Global.ToolMap[player.tool_1_action])
 
 
-func update() -> void:
-	super.update()
+func update(_delta: float) -> void:
+	super.update(_delta)
 	player.current_animation = get_movement_type() + player.get_direction()
 
 func get_movement_type() -> String:

@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(_delta: float) -> void:
-	current_state.update()
+	current_state.update(_delta)
 	
 	
 func switch_to(name: String) -> void:
