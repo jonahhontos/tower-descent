@@ -59,6 +59,6 @@ func end_attack() -> void:
 	parent_state_machine.switch_to("Move")
 
 
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	if parent_state_machine.current_state == self:
 		end_attack()

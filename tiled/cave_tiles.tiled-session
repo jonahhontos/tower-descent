@@ -1,8 +1,17 @@
 {
-    "activeFile": "",
+    "activeFile": "custom_maps/tower_interior/zone_1/entry_room.tmx",
     "expandedProjectPaths": [
+        ".",
+        "custom_maps/tower_interior",
+        "custom_maps/tower_interior/zone_1",
+        "custom_maps",
+        "TSX files"
     ],
     "fileStates": {
+        "TSX files/muddy cave v1.tsx": {
+            "scaleInDock": 1.4692,
+            "scaleInEditor": 3.42
+        },
         "TSX files/muddy cave v2.tsx": {
             "scaleInDock": 1
         },
@@ -13,30 +22,45 @@
             "scaleInDock": 1
         },
         "_muddy cave sample map.tmx": {
-            "scale": 2.9922,
+            "scale": 2.6259,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 128.50076866519618,
-                "y": 210.04611991177063
+                "x": 354.54510834380596,
+                "y": 332.26703225560766
+            }
+        },
+        "custom_maps/tower_interior/zone_1/boss_chamber.tmx": {
+            "scale": 1.846,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 557.421451787649,
+                "y": 411.43011917659805
             }
         },
         "custom_maps/tower_interior/zone_1/entry_room.tmx": {
-            "scale": 2.7751,
-            "selectedLayer": 3,
+            "scale": 1.4241,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 350.43782206046626,
-                "y": 395.1208965442687
+                "x": 596.8681974580438,
+                "y": 562.8116003089672
             }
         }
     },
     "last.externalTilesetPath": "/Users/jonahhontos/Documents/game dev/solo-games/tower-descent/tiled/TSX files",
+    "last.imagePath": "/Users/jonahhontos/Documents/game dev/solo-games/tower-descent/tiled/muddy cave sheets",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "openFiles": [
+        "custom_maps/tower_interior/zone_1/entry_room.tmx",
+        "TSX files/muddy cave v1.tsx",
+        "_muddy cave sample map.tmx"
     ],
     "project": "cave_tiles.tiled-project",
     "recentFiles": [
+        "_muddy cave sample map.tmx",
+        "TSX files/muddy cave v1.tsx",
+        "custom_maps/tower_interior/zone_1/entry_room.tmx"
     ],
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)"
 }
