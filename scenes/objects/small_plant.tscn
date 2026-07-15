@@ -59,6 +59,6 @@ shape = SubResource("RectangleShape2D_1ls8d")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2126524310]
 libraries/ = SubResource("AnimationLibrary_1vnsl")
-speed_scale = 0.9
+speed_scale = 0.8
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

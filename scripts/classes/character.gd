@@ -3,6 +3,8 @@ class_name Character
 
 @export var speed: float
 @export var acceleration: float
+var speed_mod: float = 1.0
+var acc_mod: float = 1.0
 var last_direction: Vector2
 var direction: Vector2
 var animation_player: AnimationPlayer
@@ -15,7 +17,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	last_direction = (direction if direction else last_direction).normalized()
-	velocity = velocity.lerp(direction * speed, acceleration * delta)
+	velocity = velocity.lerp(direction * (speed * speed_mod), (acceleration * acc_mod) * delta)
 	move_and_slide()	
 	
 	

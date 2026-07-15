@@ -6,6 +6,7 @@ var combo_step: int = 0
 var next_step: int = 0
 var can_act: bool = false
 var can_move: bool = false
+var dash: bool = false
 
 const MAX_COMBO: int = 2
 
@@ -27,11 +28,16 @@ func update_physics(_delta: float) -> void:
 	# !! TODO !! make this action dynamic
 	if Input.is_action_just_pressed("tool1_action"):
 		next_step = clampi(combo_plus_one, 0, MAX_COMBO)
+		
+	if Input.is_action_just_pressed("dash"):
+		dash = true
 	
 	var input: Vector2 = Input.get_vector("left","right","up","down")
 	
 	if can_act:
-		if next_step == combo_plus_one:
+		if dash:
+			parent_state_machine.switch_to("Dash")
+		elif next_step == combo_plus_one:
 			combo_step = next_step
 			if input:
 				character.last_direction = input
@@ -45,6 +51,7 @@ func play_next_animation() -> void:
 	character.current_animation = "sword_" + str(combo_step) + character.get_direction()
 	can_act = false
 	can_move = false
+	dash = false
 
 
 func enable_actions() -> void:

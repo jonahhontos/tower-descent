@@ -3,9 +3,41 @@
 [ext_resource type="Script" uid="uid://d3jija5r55cug" path="res://scripts/entities/player.gd" id="1_08t41"]
 [ext_resource type="Texture2D" uid="uid://mrk1hd2bpqec" path="res://assets/sprites/anya_shadow.png" id="2_1ie0h"]
 [ext_resource type="Texture2D" uid="uid://b5mxl6cw3g5ra" path="res://assets/sprites/anya.png" id="3_d4qa6"]
+[ext_resource type="Texture2D" uid="uid://cnsju2ve1kbu2" path="res://assets/particles/dash_dust.png" id="4_dnykm"]
 [ext_resource type="Script" uid="uid://btdyrtsm7nsmd" path="res://scripts/entities/player_state_machine.gd" id="5_5u6hq"]
-[ext_resource type="Script" uid="uid://cygtveceq7kq1" path="res://scenes/entities/player_move_state.gd" id="6_d4qa6"]
-[ext_resource type="Script" uid="uid://b74nh4cb2pxyh" path="res://scenes/entities/use_sword_state.gd" id="7_ss7kx"]
+[ext_resource type="Script" uid="uid://cygtveceq7kq1" path="res://scripts/states/player/player_move.gd" id="6_d4qa6"]
+[ext_resource type="Script" uid="uid://c8cfgbvtqwjgp" path="res://scripts/states/player/dash.gd" id="7_dnykm"]
+[ext_resource type="Script" uid="uid://b74nh4cb2pxyh" path="res://scripts/states/player/use_sword.gd" id="7_ss7kx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1ls8d"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_peiq8"]
+_data = [Vector2(0, 0.40607727), 0.0, 0.0, 0, 0, Vector2(0.34085214, 0.8701657), 0.7618213, 0.7618213, 0, 0, Vector2(1, 0.19060767), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_mwk7a"]
+curve = SubResource("Curve_peiq8")
+
+[sub_resource type="Curve" id="Curve_dnykm"]
+_limits = [0.0, 1.5, 0.0, 1.0]
+_data = [Vector2(0, 0.47091413), 0.0, 0.0, 0, 0, Vector2(0.9974875, 1.3711911), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_dnykm"]
+curve = SubResource("Curve_dnykm")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y1kd2"]
+gravity = Vector3(0, 0, 0)
+scale_min = 0.9
+scale_max = 1.1
+scale_curve = SubResource("CurveTexture_dnykm")
+alpha_curve = SubResource("CurveTexture_mwk7a")
+anim_speed_min = 1.0
+anim_speed_max = 1.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_08t41"]
 radius = 3.0
@@ -24,6 +56,118 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_3hm5d"]
+resource_name = "dash_down"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [108]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_yw3xw"]
+resource_name = "dash_left"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [120]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6gvyl"]
+resource_name = "dash_right"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [120]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BodySprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_u2s01"]
+resource_name = "dash_up"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [114]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -973,6 +1117,10 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c5rqy"]
 _data = {
 &"RESET": SubResource("Animation_42nxq"),
+&"dash_down": SubResource("Animation_3hm5d"),
+&"dash_left": SubResource("Animation_yw3xw"),
+&"dash_right": SubResource("Animation_6gvyl"),
+&"dash_up": SubResource("Animation_u2s01"),
 &"idle_down": SubResource("Animation_5u6hq"),
 &"idle_left": SubResource("Animation_1ie0h"),
 &"idle_right": SubResource("Animation_d4qa6"),
@@ -1010,11 +1158,18 @@ acceleration = 15.0
 [node name="ShadowSprite" type="Sprite2D" parent="." unique_id=1984403188]
 texture = ExtResource("2_1ie0h")
 
+[node name="DashParticles" type="GPUParticles2D" parent="." unique_id=1091795013]
+material = SubResource("CanvasItemMaterial_1ls8d")
+emitting = false
+texture = ExtResource("4_dnykm")
+lifetime = 0.46
+process_material = SubResource("ParticleProcessMaterial_y1kd2")
+
 [node name="BodySprite" type="Sprite2D" parent="." unique_id=814670764]
 texture = ExtResource("3_d4qa6")
 offset = Vector2(0, -13)
 hframes = 6
-vframes = 18
+vframes = 21
 
 [node name="MoveCollision" type="CollisionShape2D" parent="." unique_id=1349553031]
 rotation = 1.5707964
@@ -1039,4 +1194,17 @@ script = ExtResource("7_ss7kx")
 movement_drift = 300
 metadata/_custom_type_script = "uid://cstykcu1abcbh"
 
+[node name="Dash" type="Node" parent="StateMachine" unique_id=1549017100]
+script = ExtResource("7_dnykm")
+dash_speed_mod = 1.0
+dash_acc_mod = 1.0
+cooldown = 0.1
+metadata/_custom_type_script = "uid://cstykcu1abcbh"
+
+[node name="DashTimer" type="Timer" parent="." unique_id=1595857255]
+process_callback = 0
+wait_time = 0.12
+one_shot = true
+
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/UseSword" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="DashTimer" to="StateMachine/Dash" method="_on_dash_timer_timeout"]
