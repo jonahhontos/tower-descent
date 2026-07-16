@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d3jija5r55cug" path="res://scripts/entities/player.gd" id="1_08t41"]
 [ext_resource type="Texture2D" uid="uid://mrk1hd2bpqec" path="res://assets/sprites/anya_shadow.png" id="2_1ie0h"]
 [ext_resource type="Texture2D" uid="uid://b5mxl6cw3g5ra" path="res://assets/sprites/anya.png" id="3_d4qa6"]
+[ext_resource type="Texture2D" uid="uid://dbjmftx35lxu7" path="res://assets/particles/dash_down.png" id="4_c5rqy"]
 [ext_resource type="Texture2D" uid="uid://cnsju2ve1kbu2" path="res://assets/particles/dash_dust.png" id="4_dnykm"]
 [ext_resource type="Script" uid="uid://btdyrtsm7nsmd" path="res://scripts/entities/player_state_machine.gd" id="5_5u6hq"]
 [ext_resource type="Script" uid="uid://cygtveceq7kq1" path="res://scripts/states/player/player_move.gd" id="6_d4qa6"]
@@ -23,14 +24,16 @@ point_count = 3
 curve = SubResource("Curve_peiq8")
 
 [sub_resource type="Curve" id="Curve_dnykm"]
-_limits = [0.0, 1.5, 0.0, 1.0]
-_data = [Vector2(0, 0.47091413), 0.0, 0.0, 0, 0, Vector2(0.9974875, 1.3711911), 0.0, 0.0, 0, 0]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 0.47091413), 0.0, 0.0, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_dnykm"]
 curve = SubResource("Curve_dnykm")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y1kd2"]
+lifetime_randomness = 0.1
+direction = Vector3(40, 0, 0)
 gravity = Vector3(0, 0, 0)
 scale_min = 0.9
 scale_max = 1.1
@@ -38,6 +41,18 @@ scale_curve = SubResource("CurveTexture_dnykm")
 alpha_curve = SubResource("CurveTexture_mwk7a")
 anim_speed_min = 1.0
 anim_speed_max = 1.0
+
+[sub_resource type="Gradient" id="Gradient_b6tgf"]
+offsets = PackedFloat32Array(0.009404388, 0.9874608)
+colors = PackedColorArray(0.77, 0.4235, 0.55632496, 0.9098039, 0.27313, 0.26909998, 0.39, 0.18431373)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5ki56"]
+gradient = SubResource("Gradient_b6tgf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dnykm"]
+emission_shape_offset = Vector3(0, -13, 0)
+gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_5ki56")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_08t41"]
 radius = 3.0
@@ -1156,16 +1171,30 @@ speed = 200.0
 acceleration = 15.0
 
 [node name="ShadowSprite" type="Sprite2D" parent="." unique_id=1984403188]
+y_sort_enabled = true
 texture = ExtResource("2_1ie0h")
 
-[node name="DashParticles" type="GPUParticles2D" parent="." unique_id=1091795013]
+[node name="DashEffects" type="Node2D" parent="." unique_id=1545138680]
+
+[node name="DashParticlesBack" type="GPUParticles2D" parent="DashEffects" unique_id=1091795013]
+y_sort_enabled = true
 material = SubResource("CanvasItemMaterial_1ls8d")
 emitting = false
+amount = 10
 texture = ExtResource("4_dnykm")
 lifetime = 0.46
+randomness = 0.11
 process_material = SubResource("ParticleProcessMaterial_y1kd2")
 
+[node name="DashTrail" type="GPUParticles2D" parent="DashEffects" unique_id=1584380858]
+emitting = false
+amount = 4
+texture = ExtResource("4_c5rqy")
+lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_dnykm")
+
 [node name="BodySprite" type="Sprite2D" parent="." unique_id=814670764]
+y_sort_enabled = true
 texture = ExtResource("3_d4qa6")
 offset = Vector2(0, -13)
 hframes = 6
@@ -1177,6 +1206,8 @@ shape = SubResource("CapsuleShape2D_08t41")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1810594156]
 zoom = Vector2(6, 6)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1396724705]
 libraries/ = SubResource("AnimationLibrary_c5rqy")
@@ -1196,14 +1227,14 @@ metadata/_custom_type_script = "uid://cstykcu1abcbh"
 
 [node name="Dash" type="Node" parent="StateMachine" unique_id=1549017100]
 script = ExtResource("7_dnykm")
-dash_speed_mod = 1.0
-dash_acc_mod = 1.0
+dash_speed_mod = 1.5
+dash_acc_mod = 2.0
 cooldown = 0.1
 metadata/_custom_type_script = "uid://cstykcu1abcbh"
 
 [node name="DashTimer" type="Timer" parent="." unique_id=1595857255]
 process_callback = 0
-wait_time = 0.12
+wait_time = 0.15
 one_shot = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/UseSword" method="_on_animation_player_animation_finished"]
