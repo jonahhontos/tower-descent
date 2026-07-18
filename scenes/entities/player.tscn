@@ -441,10 +441,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.07491623, 0.12625612),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.01959265, 0.039702307, 0.060387045),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [54, 56, 57]
+"values": [54, 55, 56, 57]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -465,7 +465,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.13156502, 0.222744, 0.42491782),
+"times": PackedFloat32Array(0.061079867, 0.15225887, 0.3055382),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
@@ -628,7 +628,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_1yk18"]
 resource_name = "sword_1_down"
-length = 0.5009811
+length = 0.50203395
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -637,10 +637,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05019511, 0.10137743),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.01959265, 0.039702307, 0.060387045),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [72, 74, 75]
+"values": [73, 74, 75, 76]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -661,7 +661,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.10636, 0.20624913, 0.40714872),
+"times": PackedFloat32Array(0.061079867, 0.15225887, 0.3055382),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
@@ -833,10 +833,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1005339, 0.14579827),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1005339, 0.14579827, 0.19127738),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [90, 92, 93]
+"values": [90, 91, 92, 93]
 }
 tracks/1/type = "value"
 tracks/1/imported = false

@@ -55,11 +55,14 @@ func _on_dash_timer_timeout() -> void:
 	dash_particles_back.emitting = false
 	if action_pressed:
 		parent_state_machine.switch_to("UseSword")
+		print("sword condition 1")
 	else:
 		await get_tree().create_timer(cooldown).timeout
 		if action_pressed:
 			parent_state_machine.switch_to("UseSword")
+			print("sword condition 2")
 		else:
 			parent_state_machine.switch_to("Move")
+			print("move from dash")
 	dash_trail.emitting = false
 	#dash_particles.emitting = false
