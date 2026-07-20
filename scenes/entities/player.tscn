@@ -481,7 +481,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_2ngu4"]
 resource_name = "sword_0_left"
-length = 0.50274163
+length = 0.50203395
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -490,10 +490,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.07545173, 0.12702447),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.01959265, 0.039702307, 0.060387045),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [66, 68, 69]
+"values": [66, 67, 68, 69]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -514,7 +514,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.1323972, 0.22636592, 0.42526877),
+"times": PackedFloat32Array(0.061079867, 0.15225887, 0.3055382),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
@@ -530,7 +530,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_n36er"]
 resource_name = "sword_0_right"
-length = 0.50084674
+length = 0.50203395
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -539,10 +539,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.075802684, 0.12737541),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.01959265, 0.039702307, 0.060387045),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [66, 68, 69]
+"values": [66, 67, 68, 69]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -563,7 +563,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.13029146, 0.22531305, 0.42561972),
+"times": PackedFloat32Array(0.061079867, 0.15225887, 0.3055382),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
@@ -579,7 +579,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_d745t"]
 resource_name = "sword_0_up"
-length = 0.5003213
+length = 0.50203395
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -588,10 +588,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.07566599, 0.12700589),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.01959265, 0.039702307, 0.060387045),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [60, 62, 63]
+"values": [60, 61, 62, 63]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -612,7 +612,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.12976746, 0.23198119, 0.4242696),
+"times": PackedFloat32Array(0.061079867, 0.15225887, 0.3055382),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
@@ -677,7 +677,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_b4o2o"]
 resource_name = "sword_1_left"
-length = 0.5018996
+length = 0.50203395
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -686,10 +686,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05090578, 0.102088094),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.01959265, 0.039702307, 0.060387045),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [84, 86, 87]
+"values": [84, 85, 86, 87]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -710,7 +710,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.10657693, 0.20601054, 0.4075084),
+"times": PackedFloat32Array(0.061079867, 0.15225887, 0.3055382),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
@@ -726,7 +726,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_yr3on"]
 resource_name = "sword_1_right"
-length = 0.50154865
+length = 0.50203395
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -735,10 +735,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05090578, 0.102088094),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.01959265, 0.039702307, 0.060387045),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [84, 86, 87]
+"values": [84, 85, 86, 87]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -759,7 +759,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.10587503, 0.20671244, 0.40364793),
+"times": PackedFloat32Array(0.061079867, 0.15225887, 0.3055382),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
@@ -775,7 +775,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_qc1tv"]
 resource_name = "sword_1_up"
-length = 0.50211823
+length = 0.50203395
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -784,10 +784,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.050554827, 0.10173714),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.01959265, 0.039702307, 0.060387045),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [78, 80, 81]
+"values": [78, 79, 80, 81]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -808,7 +808,7 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.1046599, 0.20417152, 0.39733073),
+"times": PackedFloat32Array(0.061079867, 0.15225887, 0.3055382),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
@@ -882,10 +882,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.20030288, 0.24556725),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1005339, 0.14579827, 0.19127738),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [102, 104, 105]
+"values": [102, 103, 104, 105]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -906,11 +906,14 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.44625354, 0.64240766),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.3026152, 0.4014082, 0.54263866),
+"transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
 "method": &"enable_actions"
+}, {
+"args": [],
+"method": &"enable_movement"
 }, {
 "args": [],
 "method": &"end_attack"
@@ -928,10 +931,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.20030288, 0.24556725),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1005339, 0.14579827, 0.19127738),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [102, 104, 105]
+"values": [102, 103, 104, 105]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -952,11 +955,14 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.44625354, 0.64240766),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.3026152, 0.4014082, 0.54263866),
+"transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
 "method": &"enable_actions"
+}, {
+"args": [],
+"method": &"enable_movement"
 }, {
 "args": [],
 "method": &"end_attack"
@@ -965,7 +971,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_xe83n"]
 resource_name = "sword_2_up"
-length = 0.8036682
+length = 0.7025932
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -974,10 +980,10 @@ tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2003029, 0.24556726),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1005339, 0.14579827, 0.19127738),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [96, 98, 99]
+"values": [96, 97, 98, 99]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -998,11 +1004,14 @@ tracks/2/path = NodePath("StateMachine/UseSword")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.44625354, 0.55782753),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.3026152, 0.4014082, 0.54263866),
+"transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
 "method": &"enable_actions"
+}, {
+"args": [],
+"method": &"enable_movement"
 }, {
 "args": [],
 "method": &"end_attack"
